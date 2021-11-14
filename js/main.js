@@ -59,7 +59,7 @@ if(parar == false && this.time.now > contadorTiempoBalas){
     altura = Math.floor((Math.random() * (290 - 10)) + 10)
     bala = this.balas.create(800, altura, 'bala')
     bala.anchor.setTo(0.5)
-    bala.body.velocity.x = -100
+    bala.body.velocity.x = -150
     contadorTiempoBalas = this.time.now + nivelesDificultad[nivelDificultad]
 }
 
@@ -68,12 +68,14 @@ this.physics.arcade.overlap(this.barraFondo, this.balas, function(barra, bala){
     bala.kill()
 })
 
+
 //Contar puntos
-this.physics.arcade.overlap(this.barraContador, this.balas, function(barra, bala){
-    if(barra.body.x == parseInt(bala.body.x)){
+this.physics.arcade.overlap(this.barraContador, this.balas, function(barraContador, balaColisionando){
+    if(parseInt(balaColisionando.body.x) == 40){
         contadorPuntos += 1
     }
 })
+
 
 //Muerte
 this.game.physics.arcade.collide(this.personaje, this.balas, function(){
