@@ -59,7 +59,7 @@ if(parar == false && this.time.now > contadorTiempoBalas){
     altura = Math.floor((Math.random() * (290 - 10)) + 10)
     bala = this.balas.create(800, altura, 'bala')
     bala.anchor.setTo(0.5)
-    bala.body.velocity.x = -150
+    bala.body.velocity.x = -200 
     contadorTiempoBalas = this.time.now + nivelesDificultad[nivelDificultad]
 }
 

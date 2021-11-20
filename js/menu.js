@@ -1,9 +1,5 @@
 contadorParpadeo = 0;
 visible = false;
-console.log('OCS Invader')
-console.log('Version 0.1')
-console.log('En desarrollo')
-
 
 var escenaMenu={
 preload:function(){
